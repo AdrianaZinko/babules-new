@@ -102,63 +102,7 @@ body {
 .dropdown-list__item:not(:last-child) {
     margin-bottom: 10px;
 }
-
-.burger {
-    width: 40px;
-    height: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    position: relative;
-    z-index: 100;
-    display: none;
-}
-
-.burger::before,
-.burger::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-}
-
-.burger::after {
-    top: auto;
-    bottom: 0;
-}
-
-.burger span {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 2px;
-    display: inline-block;
-    background-color: #fff;
-}
-
-.overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.lock {
-    overflow: hidden;
-}
-
-
-
+ 
 .section {
     padding-top: 30px;
 
@@ -198,7 +142,7 @@ body {
 }
 
 .categories__button {
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .list {
@@ -212,9 +156,13 @@ body {
     display: flex;
 }
 
-.list__caption {
-    border-top: 1px solid #d9d9d9;
+.list__caption { 
     font-weight: 700;
+}
+
+.list__caption  .list__text{
+    border-top: 1px solid #d9d9d9;
+
 }
 
 .list__text {
@@ -278,8 +226,8 @@ body {
     flex: 0 0 120px;
 }
 
-.transactions__button {
-    margin-top: 20px;
+.transactions__button { 
+    margin: 20px;
 }
 
 .transactions__select {
@@ -347,6 +295,10 @@ body {
 .report__list {
     overflow-x: hidden;
 }
+.report-category__sum{
+    padding: 10px;
+    background-color: #dff0d8;
+}
 
 .report .list__name {
     width: 200px;
@@ -388,6 +340,14 @@ body {
 
 .form__button:not(:last-child) {
     margin-right: 10px;
+}
+
+.nothing{
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 100px;
+    color: #f91004;
 }
 
 @media (min-width:769px) {
@@ -490,4 +450,18 @@ body {
     .report__legend {
         display: none;
     }
+    .categories__input {
+        width: 100%;
+    }
+    .form__button{
+        width: 100%;
+        text-align: center;
+    }
+    .form__input { 
+        width: 100%;
+    }
+    .form__button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    } 
 }

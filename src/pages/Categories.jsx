@@ -40,7 +40,7 @@ useEffect(() => {
             ?<Loader/>
             : searchedCategories.length ?
                searchedCategories.map((category,index)=> <CategoryItem  remove={removePost}  number={index+1} category={category} key={category._id}/>)
-                :<div>Нічого не знайдено</div>
+                :<div className="nothing">Нічого не знайдено</div>
               }    
             </ul> 
         </div>

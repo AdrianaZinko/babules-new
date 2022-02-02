@@ -69,7 +69,7 @@ const ReportByCost = () => {
       <h2 className="report__caption">Розподіл витрат за період [по датам]</h2>
 
       {report.length <= 1 ? (
-        <h2>Нічого нема</h2>
+        <div className="nothing">Нічого нема</div>
       ) : (
         <div className="report__box report-cost__box">
           <div className="report__legend">Values</div>

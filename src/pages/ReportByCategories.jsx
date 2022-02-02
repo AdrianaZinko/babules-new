@@ -53,7 +53,7 @@ const ReportByCategories = (props) =>{
       <section className="section report"> 
       <h1 className="title transactions__title">Звіт за період {d.state.dateStart.toISOString().slice(0, 10)} - {d.state.dateEnd.toISOString().slice(0, 10)}</h1>
       {report.length <= 1 ? (
-        <h2>Нічого нема</h2>
+        <div className="nothing">Нічого нема</div>
       ) :  <div className="report__box">
         <div className="report__inner inner"> 
           <ul className="report__list list">
@@ -70,7 +70,7 @@ const ReportByCategories = (props) =>{
               })
             }  
           </ul>
-          <div className="report-category__text">
+          <div className="report-category__sum">
             Всього: 
             {
               " "+output.reduce((acc,item)=>   acc+=item.price ,0)

@@ -39,7 +39,7 @@ const Report = () => {
     return Math.random() * (date2 - date1) + date1;
   }
 
-  const generet = (e) => {
+  const generate = (e) => {
     e.preventDefault();
     const typeOption = document.querySelectorAll(".option");
     setReport({
@@ -75,8 +75,7 @@ const Report = () => {
               selected={report.dateEnd}
               onChange={(e) => setReport({ ...report, dateEnd: e })}
             />
-          </label>
-          {console.log(report.dateEnd)}
+          </label> 
           <label className="form__label">
             <div className="form__text">Тип операції</div>
             <select
@@ -87,7 +86,7 @@ const Report = () => {
               className="select "
             >
               <option value="all" disabled>
-                Тип{" "}
+                Тип 
               </option>
               <option className="option" key="Витрати" value="Витрати">
                 Витрати
@@ -119,7 +118,7 @@ const Report = () => {
             </select>
           </label>
           <div className="form__controls">
-            <button onClick={generet} className="btn-reset button form__button">
+            <button onClick={generate} className="btn-reset button form__button">
               Згенерувати
             </button>
             <button

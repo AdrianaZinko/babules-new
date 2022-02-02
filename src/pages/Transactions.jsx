@@ -67,7 +67,7 @@ const Transactions = () => {
               />
             ))
           ) : (
-            <div>Нічого не знайдено</div>
+            <div className="nothing">Нічого не знайдено</div>
           )}
         </ul>
       </div>
